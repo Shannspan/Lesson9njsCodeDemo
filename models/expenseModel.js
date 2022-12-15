@@ -6,25 +6,25 @@ const mongoose = require('mongoose');
 // keep all types as strings for now
 
 let expenseSchema = new mongoose.Schema({
-    Expense: {
+    expense: {
         type: String,
         required: 'This field is required'
     },
-    Amount: {
+    amount: {
         type: String,
         required: 'This field is required'
     },
-    Date: {
+    date: {
         type: String,
         required: 'This field is required'
     },
-    Notes: {
+    notes: {
         type: String,
         required: 'This field is required'
     }
 }, {
-    // to stop display of v number showing with each record
-    // versionKey: false
+    // to stop display of v number showing with each record - optional
+    versionKey: false
 });
 
 //call mongoose and model and schema
